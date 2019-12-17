@@ -1,5 +1,5 @@
 {
-  "name": "in-class",
+  "name": "inClass",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -36,7 +36,6 @@
     "less-loader": "^5.0.0",
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
-    "prop-types": "^15.7.2",
     "react-hot-loader": "^4.12.18",
     "react-svg-loader": "^3.0.3",
     "sass-loader": "^8.0.0",
@@ -45,12 +44,27 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.8.0",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.36",
+    "@material-ui/styles": "^4.7.1",
+    "axios": "^0.19.0",
+    "chart.js": "^2.9.3",
     "clean-webpack-plugin": "^3.0.0",
+    "clsx": "^1.0.4",
     "express": "^4.17.1",
+    "formik": "^2.0.8",
     "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^6.0.0",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-swipeable-views": "^0.13.3",
+    "react-transition-group": "^4.3.0",
     "webpack": "^4.41.3",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "yup": "^0.27.0"
   }
 }

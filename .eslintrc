@@ -4,12 +4,26 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": ["error"],
-    "max-len": [1, 70, 2, { "ignoreComments": true }],
+    // "max-len": [1, 70, 2, { "ignoreComments": true }],
     "no-unused-vars": 0,
-    "react/jsx-filename-extension": [
-      1,
-      { "extensions": [".js", ".jsx"] }
-    ]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": "off",
+    "comma-dangle": ["error", "never"],
+    "react/jsx-indent": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "ignore",
+        "prop": "ignore"
+      }
+    ],
+    "react/no-unescaped-entities": "off"
   },
   "env": {
     "browser": true

@@ -8,41 +8,41 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'React Webpack Template',
+      title: 'Chnirt inClass',
       filename: 'index.html',
       template: './public/index.html',
       favicon: './public/favicon.ico',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
-        removeAttributeQuotes: true,
+        removeAttributeQuotes: true
       },
-      chunksSortMode: 'dependency',
+      chunksSortMode: 'dependency'
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   watch: process.env.NODE_ENV !== 'production' && true,
   resolve: {
-    extensions: ['.js', 'jsx'],
+    extensions: ['.js', 'jsx']
   },
   module: {
     rules: [
       {
         test: /\.(js)x?$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
+        use: ['babel-loader', 'eslint-loader']
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
+        use: ['style-loader', 'css-loader', 'less-loader']
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -52,34 +52,34 @@ module.exports = {
             loader: 'image-webpack-loader',
             options: {
               bypassOnDebug: true, // webpack@1.x
-              disable: true, // webpack@2.x and newer
-            },
-          },
-        ],
+              disable: true // webpack@2.x and newer
+            }
+          }
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader'],
+        use: ['file-loader']
       },
       {
         test: /\.(csv|tsv)$/,
-        use: ['csv-loader'],
+        use: ['csv-loader']
       },
       {
         test: /\.svg$/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: 'babel-loader'
           },
           {
             loader: 'react-svg-loader',
             options: {
-              jsx: true, // true outputs JSX tags
-            },
-          },
-        ],
-      },
-    ],
+              jsx: true // true outputs JSX tags
+            }
+          }
+        ]
+      }
+    ]
   },
   optimization: {
     minimize: true,
@@ -90,12 +90,12 @@ module.exports = {
     occurrenceOrder: false,
     usedExports: true,
     concatenateModules: true,
-    sideEffects: false,
+    sideEffects: false
   },
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   devServer: {
     compress: true,
@@ -104,10 +104,10 @@ module.exports = {
     // lazy: true,
     filename: 'bundle.js',
     headers: {
-      'X-Custom-Foo': 'bar',
+      'X-Custom-Foo': 'bar'
     },
     historyApiFallback: {
-      disableDotRule: true,
+      disableDotRule: true
     },
     host: '0.0.0.0',
     hot: true,
@@ -128,13 +128,13 @@ module.exports = {
       chunks: true,
       chunkModules: false,
       modules: false,
-      children: true,
+      children: true
     },
     watchContentBase: true,
     watchOptions: {
       ignored: /node_modules/,
-      poll: true,
+      poll: true
     },
-    writeToDisk: true,
-  },
+    writeToDisk: true
+  }
 }
