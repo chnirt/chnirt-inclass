@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Chnirt inClass',
+      title: 'Chnirt checkClass',
       filename: 'index.html',
       template: './public/index.html',
       favicon: './public/favicon.ico',

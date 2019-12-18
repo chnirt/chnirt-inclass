@@ -16,6 +16,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import { CTX } from '../../tools/context'
 import Logo from '../../assets/images/logo.png'
+import CheckLogo from '../../assets/images/check-logo.png'
 import { Facebook as FacebookIcon, Google as GoogleIcon } from '../../icons'
 
 function Copyright() {
@@ -52,7 +53,8 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center'
   },
   avatar: {
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
+    width: '50px'
   },
   socialButtons: {
     display: 'flex',
@@ -62,7 +64,7 @@ const useStyles = makeStyles(theme => ({
   socialIcon: {
     marginRight: theme.spacing(1)
   },
-  sugestion: {
+  suggestion: {
     marginTop: theme.spacing(2)
   },
   form: {
@@ -91,7 +93,12 @@ function index(props) {
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Avatar variant="square" className={classes.avatar} src={Logo} />
+          {/* <Avatar
+            variant="rounded"
+            className={classes.avatar}
+            src={CheckLogo}
+          /> */}
+          <img className={classes.avatar} src={CheckLogo} alt="CheckLogo" />
 
           <Typography color="textSecondary" gutterBottom>
             Sign in with social media
@@ -125,7 +132,7 @@ function index(props) {
 
           <Typography
             align="center"
-            className={classes.sugestion}
+            className={classes.suggestion}
             color="textSecondary"
             variant="body1"
           >
