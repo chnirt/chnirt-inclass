@@ -70,12 +70,12 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function index(props) {
+function index(props) {
   const { className, ...rest } = props
 
   const classes = useStyles()
 
-  const [status, setStatus] = React.useState(1)
+  const [status, setStatus] = React.useState(0)
   const handleChange = event => {
     setStatus(event.target.value)
   }
@@ -89,7 +89,7 @@ export default function index(props) {
             placeholder="Search..."
           />
         </Grid>
-        <Grid item xs={12} md={3}>
+        {/* <Grid item xs={12} md={3}>
           <FormControl className={classes.form}>
             <NativeSelect
               id="demo-customized-select-native"
@@ -97,12 +97,13 @@ export default function index(props) {
               onChange={handleChange}
               input={<BootstrapInput />}
             >
-              <option value={0}>All</option>
-              <option value={1}>Active</option>
-              <option value={-1}>Expired</option>
+              <option value={0}>Active</option>
+              <option value={1}>Suspended</option>
+              <option value={-1}>Blacklisted</option>
             </NativeSelect>
           </FormControl>
-        </Grid>
+        </Grid> */}
+        <Grid item md={3} />
         <Grid item xs={12} md={3}>
           <Button
             className={classes.importButton}
@@ -111,10 +112,12 @@ export default function index(props) {
             variant="contained"
             size="large"
           >
-            Search
+            Add
           </Button>
         </Grid>
       </Grid>
     </div>
   )
 }
+
+export default index

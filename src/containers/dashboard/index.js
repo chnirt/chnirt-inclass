@@ -35,7 +35,7 @@ function index() {
 
   const [data, setData] = useState(null)
   useEffect(() => {
-    callApi('get', null, null).then(res => setData(res.data))
+    callApi('get', null, null).then(({ data }) => setData(data))
   }, [])
 
   return (

@@ -17,6 +17,7 @@ import CropFreeIcon from '@material-ui/icons/CropFree'
 import ImageIcon from '@material-ui/icons/Image'
 import SettingsIcon from '@material-ui/icons/Settings'
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount'
+import BusinessIcon from '@material-ui/icons/Business'
 
 export const routes = [
   {
@@ -54,85 +55,9 @@ export const routes = [
         component: 'accountsDetail'
       },
       {
-        label: 'Requests',
-        path: '/requests',
-        component: 'requests'
-      },
-      {
-        label: 'Offers',
-        path: '/offers',
-        component: 'offers'
-      },
-      {
-        label: 'Connections',
-        path: '/connections',
-        component: 'connections'
-      },
-      {
-        label: 'Wallets',
-        path: '/wallets',
-        component: 'wallets'
-      },
-      ,
-      {
-        label: 'Cash out',
-        path: '/cashout',
-        component: 'cashout'
-      },
-      {
-        label: 'Announcements',
-        path: '/announcements',
-        component: 'announcements'
-      },
-      {
-        label: 'Banners',
-        path: '/banners',
-        component: 'banners'
-      },
-      {
-        label: 'Promo Codes',
-        path: '/promocodes',
-        component: 'promocodes'
-      },
-      {
-        label: 'Referral',
-        path: '/referral',
-        component: 'referral'
-      },
-      {
-        label: 'Help Center',
-        path: '/helpcenter',
-        component: 'helpcenter'
-      },
-      {
-        label: 'Setting',
-        path: '/setting',
-        component: 'setting'
-      },
-      {
-        label: 'Global Setting',
-        path: '/globalsetting',
-        component: 'globalsetting'
-      },
-      {
-        label: 'Bank',
-        path: '/bank',
-        component: 'bank'
-      },
-      {
-        label: 'Referral Setting',
-        path: '/referralsetting',
-        component: 'referralsetting'
-      },
-      {
-        label: 'Stock Images',
-        path: '/stockimages',
-        component: 'stockimages'
-      },
-      {
-        label: 'Administrators',
-        path: '/administrators',
-        component: 'administrators'
+        label: 'Campus',
+        path: '/campus',
+        component: 'campus'
       }
     ]
   }
@@ -150,85 +75,8 @@ export const pages = [
     icon: <PersonIcon />
   },
   {
-    title: 'Requests',
-    href: '/requests',
-    icon: <TouchAppIcon />
-  },
-  {
-    title: 'Offers',
-    href: '/offers',
-    icon: <LocalOfferIcon />
-  },
-  {
-    title: 'Connections',
-    href: '/connections',
-    icon: <WifiIcon />
-  },
-  {
-    title: 'Wallets',
-    href: '/wallets',
-    icon: <AccountBalanceWalletIcon />
-  },
-  {
-    title: 'Cash out',
-    href: '/cashout',
-    icon: <AttachMoneyIcon />
-  },
-  {
-    title: 'Announcements',
-    href: '/announcements',
-    icon: <AnnouncementIcon />
-  },
-  {
-    title: 'Banners',
-    href: '/banners',
-    icon: <ViewCarouselIcon />
-  },
-  {
-    title: 'Promo Codes',
-    href: '/promocodes',
-    icon: <CodeIcon />
-  },
-  {
-    title: 'Referral',
-    href: '/referral',
-    icon: <NotesIcon />
-  },
-  {
-    title: 'Help Center',
-    href: '/helpcenter',
-    icon: <HelpIcon />
-  },
-  {
-    title: 'Setting',
-    href: '/setting',
-    icon: <SettingsIcon />,
-    pages: [
-      {
-        title: 'Global Setting',
-        href: '/globalsetting',
-        icon: <LanguageIcon />
-      },
-      {
-        title: 'Bank',
-        href: '/bank',
-        icon: <AccountBalanceIcon />
-      },
-      {
-        title: 'Referral Setting',
-        href: '/referralsetting',
-        icon: <CropFreeIcon />
-      },
-      {
-        title: 'Stock Images',
-        href: '/stockimages',
-        icon: <ImageIcon />
-      }
-    ]
-  },
-  {
-    title: 'Administrators',
-    href: '/administrators',
-    icon: <SupervisorAccountIcon />
+    title: 'Campus',
+    href: '/campus',
+    icon: <BusinessIcon />
   }
 ]

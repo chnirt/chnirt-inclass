@@ -9,7 +9,7 @@ import NotificationsIcon from '@material-ui/icons/NotificationsOutlined'
 import InputIcon from '@material-ui/icons/Input'
 
 import { CTX } from '../../../../tools/context'
-import WhiteLongLogo from '../../../../assets/images/whitelonglogo.png'
+import WhiteLongLogo from '../../../../assets/images/long-checklogo.png'
 
 const useStyles = makeStyles(theme => ({
   root: {

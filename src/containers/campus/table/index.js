@@ -56,16 +56,9 @@ function index(props) {
               className={classes.tableRow}
             >
               <TableCell align="center" component="th" scope="row">
-                {row.requestDate}
+                {row.name}
               </TableCell>
-              <TableCell align="center">{row.name}</TableCell>
-              <TableCell align="center">{row.whatIsIt}</TableCell>
-              <TableCell align="center">{row.expiryTime}</TableCell>
-              <TableCell align="center">{row.from}</TableCell>
-              <TableCell align="center">{row.to}</TableCell>
-              <TableCell align="center">{row.payment}</TableCell>
-              <TableCell align="center">{row.connections}</TableCell>
-              <TableCell align="center">{row.status}</TableCell>
+              <TableCell align="center">{row.students}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -82,5 +75,15 @@ function index(props) {
     </Paper>
   )
 }
+
+// index.propTypes = {
+//   rows: PropTypes.arrayOf,
+//   columns: PropTypes.arrayOf,
+//   rowsPerPage: PropTypes.number,
+//   page: PropTypes.number,
+//   handleChangePage: PropTypes.func,
+//   handleChangeRowsPerPage: PropTypes.func,
+//   handleDetail: PropTypes.func
+// }
 
 export default index
