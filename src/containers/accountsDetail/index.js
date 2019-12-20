@@ -10,7 +10,6 @@ import Tab from '@material-ui/core/Tab'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import { makeStyles, useTheme } from '@material-ui/styles'
-import PropTypes from 'prop-types'
 import CloseIcon from '@material-ui/icons/Close'
 
 import Profile from './profile'
@@ -18,26 +17,20 @@ import SavedAddress from './savedaddress'
 import Rating from './rating'
 
 function TabPanel(props) {
-  const { children, value, indexTabPanel, ...other } = props
+  const { children, value, index, ...other } = props
 
   return (
     <Typography
       component="div"
       role="tabpanel"
-      hidden={value !== indexTabPanel}
-      id={`simple-tabpanel-${indexTabPanel}`}
-      aria-labelledby={`simple-tab-${indexTabPanel}`}
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === indexTabPanel && <Box p={3}>{children}</Box>}
+      {value === index && <Box p={3}>{children}</Box>}
     </Typography>
   )
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node.isRequired,
-  value: PropTypes.arrayOf.isRequired,
-  indexTabPanel: PropTypes.number.isRequired
 }
 
 // TabPanel.propTypes = {
@@ -46,10 +39,10 @@ TabPanel.propTypes = {
 // 	value: PropTypes.any.isRequired
 // }
 
-function a11yProps(indexProp) {
+function a11yProps(index) {
   return {
-    id: `scrollable-auto-tab-${indexProp}`,
-    'aria-controls': `scrollable-auto-tabpanel-${indexProp}`
+    id: `scrollable-auto-tab-${index}`,
+    'aria-controls': `scrollable-auto-tabpanel-${index}`
   }
 }
 
@@ -154,11 +147,6 @@ function index(props) {
       </div>
     </div>
   )
-}
-
-index.propTypes = {
-  id: PropTypes.string.isRequired,
-  toggleDrawer: PropTypes.func.isRequired
 }
 
 export default index

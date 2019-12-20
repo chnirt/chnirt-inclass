@@ -22,7 +22,3 @@ export default function index(props) {
     </Breadcrumbs>
   )
 }
-
-index.propTypes = {
-  children: PropTypes.node.isRequired
-}

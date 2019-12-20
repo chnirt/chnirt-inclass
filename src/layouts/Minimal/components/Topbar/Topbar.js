@@ -7,8 +7,8 @@ import { AppBar, Toolbar } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
   root: {
-    boxShadow: 'none',
-  },
+    boxShadow: 'none'
+  }
 }))
 
 const Topbar = props => {
@@ -30,10 +30,6 @@ const Topbar = props => {
       </Toolbar>
     </AppBar>
   )
-}
-
-Topbar.propTypes = {
-  className: PropTypes.string,
 }
 
 export default Topbar

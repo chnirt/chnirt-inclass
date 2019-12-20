@@ -23,7 +23,10 @@
         "prop": "ignore"
       }
     ],
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "react/require-default-props": 0,
+    "react/prop-types": 0,
+    "import/prefer-default-export": 0
   },
   "env": {
     "browser": true

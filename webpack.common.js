@@ -1,6 +1,7 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
@@ -21,7 +22,7 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
-  watch: process.env.NODE_ENV !== 'production' && true,
+  watch: true,
   resolve: {
     extensions: ['.js', 'jsx']
   },
@@ -30,7 +31,11 @@ module.exports = {
       {
         test: /\.(js)x?$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
       },
       {
         test: /\.css$/,
@@ -90,7 +95,8 @@ module.exports = {
     occurrenceOrder: false,
     usedExports: true,
     concatenateModules: true,
-    sideEffects: false
+    sideEffects: false,
+    minimizer: [new OptimizeCSSAssetsPlugin({})]
   },
   output: {
     path: path.join(__dirname, 'dist'),

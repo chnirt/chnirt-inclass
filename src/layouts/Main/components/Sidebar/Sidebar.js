@@ -52,11 +52,4 @@ const Sidebar = props => {
   )
 }
 
-Sidebar.propTypes = {
-  className: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
-  variant: PropTypes.string.isRequired
-}
-
 export default Sidebar

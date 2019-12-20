@@ -136,10 +136,4 @@ const SidebarNav = props => {
   )
 }
 
-SidebarNav.propTypes = {
-  className: PropTypes.string.isRequired,
-  pages: PropTypes.arrayOf.isRequired,
-  onClose: PropTypes.func.isRequired
-}
-
 export default SidebarNav

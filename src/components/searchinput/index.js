@@ -43,10 +43,4 @@ function index(props) {
   )
 }
 
-index.propTypes = {
-  className: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  style: PropTypes.objectOf.isRequired
-}
-
 export default index

@@ -118,6 +118,7 @@ function index(props) {
       </div>
 
       <Toolbar />
+
       <div className={classes.content}>
         <AccountTable
           columns={columns}

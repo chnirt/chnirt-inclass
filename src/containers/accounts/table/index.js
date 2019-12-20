@@ -79,14 +79,14 @@ function index(props) {
   )
 }
 
-index.propTypes = {
-  rows: PropTypes.arrayOf.isRequired,
-  columns: PropTypes.arrayOf.isRequired,
-  rowsPerPage: PropTypes.number.isRequired,
-  page: PropTypes.number.isRequired,
-  handleChangePage: PropTypes.func.isRequired,
-  handleChangeRowsPerPage: PropTypes.func.isRequired,
-  handleDetail: PropTypes.func.isRequired
-}
+// index.propTypes = {
+//   rows: PropTypes.arrayOf,
+//   columns: PropTypes.arrayOf,
+//   rowsPerPage: PropTypes.number,
+//   page: PropTypes.number,
+//   handleChangePage: PropTypes.func,
+//   handleChangeRowsPerPage: PropTypes.func,
+//   handleDetail: PropTypes.func
+// }
 
 export default index

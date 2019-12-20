@@ -70,9 +70,4 @@ const Topbar = props => {
   )
 }
 
-Topbar.propTypes = {
-  className: PropTypes.string.isRequired,
-  onSidebarOpen: PropTypes.func.isRequired
-}
-
 export default Topbar

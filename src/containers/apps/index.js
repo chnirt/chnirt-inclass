@@ -10,46 +10,31 @@ export default function Root(props) {
   const { routes } = props
 
   return (
-    <Route
-      render={({ location }) => {
-        const { pathname, key } = location
-        return (
-          <>
-            <Suspense fallback={<Loading />}>
-              <TransitionGroup>
-                <CSSTransition key={key} timeout={450} classNames="fade">
-                  <Switch location={location}>
-                    {routes &&
-                      routes.map(route => (
-                        <Route
-                          key={route.label}
-                          {...route}
-                          component={routeProps => {
-                            const LazyComponent = React.lazy(() =>
-                              import(`../${route.component}`)
-                            )
-                            return (
-                              <LazyComponent
-                                {...routeProps}
-                                {...route}
-                                routes={route.routes}
-                              />
-                            )
-                          }}
-                        />
-                      ))}
-                    <Redirect to="/dashboard" />
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-            </Suspense>
-          </>
-        )
-      }}
-    />
+    <>
+      <Suspense fallback={<Loading />}>
+        <Switch>
+          {routes &&
+            routes.map(route => (
+              <Route
+                key={route.label}
+                {...route}
+                component={routeProps => {
+                  const LazyComponent = React.lazy(() =>
+                    import(`../${route.component}`)
+                  )
+                  return (
+                    <LazyComponent
+                      {...routeProps}
+                      {...route}
+                      routes={route.routes}
+                    />
+                  )
+                }}
+              />
+            ))}
+          <Redirect to="/dashboard" />
+        </Switch>
+      </Suspense>
+    </>
   )
-}
-
-Root.propTypes = {
-  routes: PropTypes.arrayOf.isRequired
 }

@@ -118,7 +118,3 @@ export default function index(props) {
     </div>
   )
 }
-
-index.propTypes = {
-  className: PropTypes.string.isRequired
-}

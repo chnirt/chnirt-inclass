@@ -32,8 +32,4 @@ const Footer = props => {
   )
 }
 
-Footer.propTypes = {
-  className: PropTypes.string.isRequired
-}
-
 export default Footer

@@ -11,15 +11,15 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 56,
     height: '100%',
     [theme.breakpoints.up('sm')]: {
-      paddingTop: 64,
-    },
+      paddingTop: 64
+    }
   },
   shiftContent: {
-    paddingLeft: 240,
+    paddingLeft: 240
   },
   content: {
-    height: '100%',
-  },
+    height: '100%'
+  }
 }))
 
 const Main = props => {
@@ -28,7 +28,7 @@ const Main = props => {
   const classes = useStyles()
   const theme = useTheme()
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'), {
-    defaultMatches: true,
+    defaultMatches: true
   })
 
   const [openSidebar, setOpenSidebar] = useState(false)
@@ -47,7 +47,7 @@ const Main = props => {
     <div
       className={clsx({
         [classes.root]: true,
-        [classes.shiftContent]: isDesktop,
+        [classes.shiftContent]: isDesktop
       })}
     >
       <Topbar onSidebarOpen={handleSidebarOpen} />
@@ -62,10 +62,6 @@ const Main = props => {
       </main>
     </div>
   )
-}
-
-Main.propTypes = {
-  children: PropTypes.node,
 }
 
 export default Main

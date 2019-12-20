@@ -51,9 +51,4 @@ const Profile = props => {
   )
 }
 
-Profile.propTypes = {
-  className: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired
-}
-
 export default Profile

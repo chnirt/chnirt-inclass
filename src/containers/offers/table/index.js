@@ -82,14 +82,4 @@ function index(props) {
   )
 }
 
-index.propTypes = {
-  columns: PropTypes.arrayOf.isRequired,
-  rows: PropTypes.arrayOf.isRequired,
-  rowsPerPage: PropTypes.number.isRequired,
-  page: PropTypes.number.isRequired,
-  handleChangePage: PropTypes.func.isRequired,
-  handleChangeRowsPerPage: PropTypes.func.isRequired,
-  handleDetail: PropTypes.func.isRequired
-}
-
 export default index
